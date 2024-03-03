@@ -1,0 +1,100 @@
+{
+    "test": {
+        "name": "test",
+        "description": "Scenario for testing field combinations with whitelist filtering",
+        "type": "crossMultiplication",
+        "allowDuplicates": false,
+        "fields": {
+            "aaaaaa": [
+                {
+                    "value": "0",
+                    "description": "描述信息"
+                },
+                {
+                    "value": "1",
+                    "description": "描述信息"
+                }
+            ],
+            "bbbbbb": [
+                {
+                    "value": "0",
+                    "description": "描述信息"
+                },
+                {
+                    "value": "1",
+                    "description": "描述信息"
+                },
+                {
+                    "value": "2",
+                    "description": "描述信息"
+                }
+            ],
+            "cccccc": [
+                {
+                   "value": "0",
+                   "description": "描述信息"
+               },
+               {
+                   "value": "1",
+                   "description": "描述信息"
+               },
+               {
+                   "value": "2",
+                   "description": "描述信息"
+               },
+               {
+                   "value": "3",
+                   "description": "描述信息"
+               },
+               {
+                   "value": "4",
+                   "description": "描述信息"
+               }
+            ]
+        },
+        "whitelistRules": {
+            "xxxxx" : [],
+            "aaaaaa": [
+                {
+                    "relationKey": "cccccc",
+                    "relationEnums": [
+                        "2",
+                        "1"
+                    ],
+                    "type": "white",
+                    "value": "0"
+                },
+                {
+                    "relationKey": "cccccc",
+                    "relationEnums": [
+                        "0",
+                    ],
+                    "type": "black",
+                    "value": "0"
+                },
+                {
+                    "relationKey": "cccccc",
+                    "allowedEnums": [
+                    ],
+                    "ignoreEnums": [
+                        "0",
+                    ],
+                    "value": "0"
+                }
+            ],
+            "cccccc": [
+                {
+                    "relationKey": "bbbbbb",
+                    "relationEnums": [
+                        "1",
+                        "2"
+                    ],
+                    "type": "white",
+                    "value": "0"
+                }
+            ]
+        }
+    },
+    "owner": "呜呜呜呜",
+    "biz": "test_star"
+}
